@@ -1,0 +1,212 @@
+:root {
+    --beige: #f3f3f3;
+    --text: #2c2b2b;
+    --pale: #fdf4d9;
+    --orange: #f4ac6d;
+    --header-text: #444444;
+}
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--pale);
+}
+#header-img {
+    width: 60px;
+    object-fit: contain;
+}
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px;
+    background-color: var(--beige);
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0 10px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.the-product {
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-style: italic;
+}
+h2 {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+#email-section {
+ margin-top: 100px;
+}
+section::before {
+    display: block;
+    content: "";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+}
+section {
+    margin: 40px 20px;
+    text-align: center;
+}
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border-color: 1px solid var(--orange);
+}
+#submit {
+    background-color: var(--orange);
+    color: var(--beige);
+    cursor: pointer;
+}
+.icon {
+    color: var(--orange);
+    margin-right: 30px;
+}
+#features {
+   text-align: left;
+   max-width: 800px;
+   margin: auto;
+}
+.feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.genre {
+    margin-right: 220px;
+}
+.feature p {
+    margin-left: 20px;
+}
+#video {
+    width: 100%;
+}
+.product-image {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid var(--text);
+}
+.product1 {
+    background-image: url(https://th.bing.com/th/id/OIP.JqDGVU5AOXfrU1ikxYS7EQAAAA?rs=1&pid=ImgDetMain);
+}
+.product2 {
+    background-image: url(https://th.bing.com/th/id/OIP.Q7JvHDbwKv3Vtu0SmPOVcgHaLF?w=144&h=215&c=7&r=0&o=5&dpr=1.5&pid=1.7);
+}
+.product3 {
+    background-image: url(https://th.bing.com/th/id/OIP.zNqT2d3iuxvaqlUKBszU0wHaIO?rs=1&pid=ImgDetMain);
+}
+.card {
+    background-color: var(--beige);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+.content {
+    color: var(--text);
+    margin-bottom: 10px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.main-price {
+    margin-right: 20px;
+    font-size: 30px;
+    color: var(--orange);
+}
+.old-price {
+    text-decoration: line-through;
+    color: var(--text);
+}
+.author {
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--text);
+    text-transform: uppercase;
+}
+.header {
+    margin: 10px 0;
+    color: var(--header-text);
+    font-weight: bolder;
+    text-shadow: 1px 1px #f4ac6d;
+}
+.add {
+    background-color: var(--orange);
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    color: var(--beige);
+    font-weight: bold;
+    margin-bottom: 10px;    
+}
+@media only screen and (min-width:600px) {
+    #nav-bar {
+        flex-direction: row;
+    }
+}
+@media only screen and (450px < width < 600px) {
+    .card {
+    font-size: 0.85rem;
+    }
+    .product-image {
+        height: 400px;
+    }
+}
+@media only screen and (450px <= width) {
+    .card {
+    display: flex;
+    max-width: 525px;
+    }
+    .inner-card {
+        width: 300px;
+        padding: 20px;
+    }
+    .product-image {
+       width: 400px;
+       border-radius: 10px 0  10px;
+    }
+}
+@media only screen and (width >= 1000px) {
+    .video {
+        width: 70%;
+    }
+    .product-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
